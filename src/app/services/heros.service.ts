@@ -71,6 +71,17 @@ export class HerosService {
 	getHero(idx: number) {
 		return this.heros[idx];
 	}
+
+	searchHeros(value: string) {
+		console.log("recibo", value);
+		let heroArr: Hero[] = [];
+		this.heros.map(hero => {
+			if (hero.nombre.toLowerCase().indexOf(value.toLowerCase()) >= 0) {
+				heroArr.push(hero);
+			}
+		});
+		return heroArr;
+	}
 }
 
 export interface Hero {

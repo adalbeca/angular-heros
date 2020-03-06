@@ -26,15 +26,23 @@
 				<a class="nav-link" [routerLink]="['/about']">About</a>
 			</li>
 		</ul>
-		<form class="form-inline my-2 my-lg-0">
+		<form
+			class="form-inline my-2 my-lg-0"
+			onsubmit="searchHero(searchText.value)"
+		>
 			<input
 				class="form-control mr-sm-2"
-				type="search"
-				placeholder="Search"
-				aria-label="Search"
+				type="text"
+				placeholder="Buscar Heroe"
+				(keyup.enter)="searchHero(searchText.value)"
+				#searchText
 			/>
-			<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
-				Search
+			<button
+				(click)="searchHero(searchText.value)"
+				class="btn btn-outline-primary my-2 my-sm-0"
+				type="button"
+			>
+				Buscar Heroe
 			</button>
 		</form>
 	</div>

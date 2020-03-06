@@ -14,6 +14,7 @@ import { HomeComponent } from "./views/home/home.component";
 import { HerosComponent } from "./views/heros/heros.component";
 import { AboutComponent } from "./views/about/about.component";
 import { HeroComponent } from './views/hero/hero.component';
+import { ResultComponent } from './views/result/result.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,8 @@ import { HeroComponent } from './views/hero/hero.component';
 		HomeComponent,
 		HerosComponent,
 		AboutComponent,
-		HeroComponent
+		HeroComponent,
+		ResultComponent
 	],
 	imports: [BrowserModule, APP_ROUTING],
 	providers: [HerosService],

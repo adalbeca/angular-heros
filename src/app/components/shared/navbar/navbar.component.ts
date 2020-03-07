@@ -12,7 +12,6 @@ export class NavbarComponent implements OnInit {
 	ngOnInit(): void {}
 
 	searchHero(value: string) {
-		console.log("a buscar", value);
 		this.router.navigate(["/results", value]);
 	}
 }

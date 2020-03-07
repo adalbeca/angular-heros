@@ -73,9 +73,9 @@ export class HerosService {
 	}
 
 	searchHeros(value: string) {
-		console.log("recibo", value);
 		let heroArr: Hero[] = [];
-		this.heros.map(hero => {
+		this.heros.map((hero, index) => {
+			hero.idx = index;
 			if (hero.nombre.toLowerCase().indexOf(value.toLowerCase()) >= 0) {
 				heroArr.push(hero);
 			}
@@ -90,4 +90,5 @@ export interface Hero {
 	images: string;
 	aparicion: string;
 	casa: string;
+	idx?: number;
 }

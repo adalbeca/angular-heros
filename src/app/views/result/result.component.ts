@@ -18,14 +18,12 @@ export class ResultComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.activateRoute.params.subscribe(params => {
-			console.log(params);
 			this.heros = this.heroService.searchHeros(params["hero"]);
 			this.terms = params["hero"];
-			console.log(this.heros);
 		});
 	}
 
-	showHero(idx: number) {
-		this.router.navigate(["/hero", idx]);
+	showHero(index: number) {
+		this.router.navigate(["/hero", index]);
 	}
 }
